@@ -45,13 +45,13 @@ public class TestCase1 extends BrowserHandler {
 		String expectedvalue = prop.getProperty("url1");
 		String actualvalue = driver.getCurrentUrl();
 		Assert.assertEquals(actualvalue, expectedvalue);
-		
+
 		driver.findElement(LoginPage.member).sendKeys(prop.getProperty("user"));
 		driver.findElement(LoginPage.name).sendKeys(prop.getProperty("username"));
 		driver.findElement(LoginPage.security).sendKeys(prop.getProperty("password"));
 		driver.findElement(LoginPage.login).click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
+
 		Select dropdown1 = new Select(driver.findElement(PassingPage.hospital));
 		dropdown1.selectByIndex(1);
 		Select dropdown2 = new Select(driver.findElement(PassingPage.role));
@@ -69,34 +69,34 @@ public class TestCase1 extends BrowserHandler {
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Thread.sleep(3000);
-		String actualvalue3=driver.getCurrentUrl();
-        String expectedvalue3=prop.getProperty("url3");
-        Assert.assertEquals(actualvalue3, expectedvalue3);
-        
-        boolean default1=driver.findElement(DomainValues.default_button1).isDisplayed();
-        Assert.assertTrue(default1);
-        boolean default2=driver.findElement(DomainValues.default_button2).isDisplayed();
-        Assert.assertTrue(default2);
-        
-       List<WebElement> list= driver.findElements(DomainValues.fulllist);
-		int size=list.size();
-		for(int i=1;i<=size;i++) {
-			boolean value=driver.findElement(By.xpath("//*[@id=\"main\"]/div[2]/div[2]/ul/li["+i+"]")).isDisplayed();
+		String actualvalue3 = driver.getCurrentUrl();
+		String expectedvalue3 = prop.getProperty("url3");
+		Assert.assertEquals(actualvalue3, expectedvalue3);
+
+		boolean default1 = driver.findElement(DomainValues.default_button1).isDisplayed();
+		Assert.assertTrue(default1);
+		boolean default2 = driver.findElement(DomainValues.default_button2).isDisplayed();
+		Assert.assertTrue(default2);
+
+		List<WebElement> list = driver.findElements(DomainValues.fulllist);
+		int size = list.size();
+		for (int i = 1; i <= size; i++) {
+			boolean value = driver.findElement(By.xpath("//*[@id=\"main\"]/div[2]/div[2]/ul/li[" + i + "]"))
+					.isDisplayed();
 			Assert.assertTrue(value);
 		}
-		for(int i=1;i<=size;i++) {
-			driver.findElement(By.xpath("//*[@id=\"main\"]/div[2]/div[2]/ul/li["+i+"]")).click();
+		for (int i = 1; i <= size; i++) {
+			driver.findElement(By.xpath("//*[@id=\"main\"]/div[2]/div[2]/ul/li[" + i + "]")).click();
 			JavascriptExecutor js;
 
 			js = (JavascriptExecutor) driver;
 			js.executeScript("window.scrollBy(0,50)", "");
 			try {
 				driver.findElement(DomainValues.error_message).click();
-			}catch(Exception e){
-				
-				
+			} catch (Exception e) {
+
 			}
-}
-		
-		}   
+		}
+
+	}
 }

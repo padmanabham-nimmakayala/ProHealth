@@ -6,7 +6,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrowserHandler {

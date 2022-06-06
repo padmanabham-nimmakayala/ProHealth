@@ -48,13 +48,13 @@ public class TestCase2 extends BrowserHandler {
 		String expectedvalue = prop.getProperty("url1");
 		String actualvalue = driver.getCurrentUrl();
 		Assert.assertEquals(actualvalue, expectedvalue);
-		
+
 		driver.findElement(LoginPage.member).sendKeys(prop.getProperty("user"));
 		driver.findElement(LoginPage.name).sendKeys(prop.getProperty("username"));
 		driver.findElement(LoginPage.security).sendKeys(prop.getProperty("password"));
 		driver.findElement(LoginPage.login).click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	
+
 		Select dropdown1 = new Select(driver.findElement(PassingPage.hospital));
 		dropdown1.selectByIndex(1);
 		Select dropdown2 = new Select(driver.findElement(PassingPage.role));
@@ -65,7 +65,7 @@ public class TestCase2 extends BrowserHandler {
 		String expectedvalue2 = prop.getProperty("url2");
 		String actualvalue2 = driver.getCurrentUrl();
 		Assert.assertEquals(actualvalue2, expectedvalue2);
-		
+
 		Actions action = new Actions(driver);
 		action.moveToElement(driver.findElement(DashBoard.settings)).perform();
 
@@ -73,19 +73,18 @@ public class TestCase2 extends BrowserHandler {
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Thread.sleep(3000);
-		String actualvalue3=driver.getCurrentUrl();
-        String expectedvalue3=prop.getProperty("url3");
-        Assert.assertEquals(actualvalue3, expectedvalue3);
-        
-        
+		String actualvalue3 = driver.getCurrentUrl();
+		String expectedvalue3 = prop.getProperty("url3");
+		Assert.assertEquals(actualvalue3, expectedvalue3);
+
 		driver.findElement(AdjustmentType.expand).click();
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement table = driver.findElement(AdjustmentType.webtable);
-		
-		boolean tab= driver.findElement(AdjustmentType.webtable).isDisplayed();
+
+		boolean tab = driver.findElement(AdjustmentType.webtable).isDisplayed();
 		Assert.assertTrue(tab);
-		
+
 		List<WebElement> rows = table.findElements(AdjustmentType.webtablerows);
 		int rowcount = rows.size();
 		List<WebElement> columns = table.findElements(AdjustmentType.webtablecolumns);
@@ -127,8 +126,7 @@ public class TestCase2 extends BrowserHandler {
 					.isDisplayed();
 			Assert.assertTrue(value5);
 		}
-		boolean value6 = driver.findElement(By.xpath("//button[@class='common-used-button'][contains(.,'Add')]"))
-				.isDisplayed();
+		boolean value6 = driver.findElement(AdjustmentType.addbutton).isDisplayed();
 		Assert.assertTrue(value6);
 
 	}
