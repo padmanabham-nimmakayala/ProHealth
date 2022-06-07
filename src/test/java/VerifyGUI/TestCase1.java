@@ -23,16 +23,7 @@ import globalstructure.LoginPage;
 import globalstructure.PassingPage;
 
 public class TestCase1 extends BrowserHandler {
-	@BeforeTest
-	public void initialisebrowser() {
-		TestCase1 frame = new TestCase1();
-		frame.browser("chrome");
-	}
 
-	@AfterTest
-	public void teardown() {
-		driver.close();
-	}
 
 	@Test
 	public void test() throws Exception {

@@ -6,8 +6,8 @@
       <class name="VerifyGUI.TestCase1">
         <methods>
           <include name="teardown"/>
-          <include name="initialisebrowser"/>
           <include name="test"/>
+          <include name="initialisebrowser"/>
         </methods>
       </class> <!-- VerifyGUI.TestCase1 -->
     </classes>

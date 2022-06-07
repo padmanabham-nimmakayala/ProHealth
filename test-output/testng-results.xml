@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-06T23:14:14 IST" name="Default suite" finished-at="2022-06-06T23:14:26 IST" duration-ms="11732">
+  <suite started-at="2022-06-07T20:13:14 IST" name="Default suite" finished-at="2022-06-07T20:13:24 IST" duration-ms="9980">
     <groups>
     </groups>
-    <test started-at="2022-06-06T23:14:14 IST" name="Default test" finished-at="2022-06-06T23:14:26 IST" duration-ms="11732">
+    <test started-at="2022-06-07T20:13:14 IST" name="Default test" finished-at="2022-06-07T20:13:24 IST" duration-ms="9980">
       <class name="VerifyGUI.TestCase2">
-        <test-method is-config="true" signature="initialisebrowser()[pri:0, instance:VerifyGUI.TestCase2@1a451d4d]" started-at="2022-06-06T23:14:14 IST" name="initialisebrowser" finished-at="2022-06-06T23:14:17 IST" duration-ms="2131" status="PASS">
+        <test-method is-config="true" signature="initialisebrowser()[pri:0, instance:VerifyGUI.TestCase2@5e0826e7]" started-at="2022-06-07T20:13:14 IST" name="initialisebrowser" finished-at="2022-06-07T20:13:16 IST" duration-ms="1410" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialisebrowser -->
-        <test-method signature="test()[pri:0, instance:VerifyGUI.TestCase2@1a451d4d]" started-at="2022-06-06T23:14:17 IST" name="test" finished-at="2022-06-06T23:14:26 IST" duration-ms="9373" status="PASS">
+        <test-method signature="test()[pri:0, instance:VerifyGUI.TestCase2@5e0826e7]" started-at="2022-06-07T20:13:16 IST" name="test" finished-at="2022-06-07T20:13:24 IST" duration-ms="8357" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:VerifyGUI.TestCase2@1a451d4d]" started-at="2022-06-06T23:14:26 IST" name="teardown" finished-at="2022-06-06T23:14:26 IST" duration-ms="169" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:VerifyGUI.TestCase2@5e0826e7]" started-at="2022-06-07T20:13:24 IST" name="teardown" finished-at="2022-06-07T20:13:24 IST" duration-ms="160" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

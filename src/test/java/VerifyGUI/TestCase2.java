@@ -26,16 +26,7 @@ import globalstructure.PassingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestCase2 extends BrowserHandler {
-	@BeforeTest
-	public void initialisebrowser() {
-		TestCase2 frame = new TestCase2();
-		frame.browser("chrome");
-	}
 
-	@AfterTest
-	public void teardown() {
-		driver.close();
-	}
 
 	@Test
 	public void test() throws Exception {
